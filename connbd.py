@@ -8,7 +8,6 @@ app = Flask(__name__)
 
 mydb = mysql.connector.connect(host="localhost",user="root",password="password",database="clientes")
 
-#http://127.0.0.1:5000/v1/cliente
 @app.route('/v1/cliente', methods=["GET"])
 def listar():
     selectAllSql = f"select * from id_clientes"
