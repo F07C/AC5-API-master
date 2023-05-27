@@ -29,7 +29,7 @@ clientes = [
 ]
 
 @app.route('/clientes',methods=['GET'])
-def obter_carros():
+def mostrar_clientes():
     return jsonify(clientes)
 
 
