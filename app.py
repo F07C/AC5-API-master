@@ -5,7 +5,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-carros = [
+clientes = [
     {
         'id': 1,
         'Nome': 'Filipe',
@@ -30,12 +30,12 @@ carros = [
 
 @app.route('/clientes',methods=['GET'])
 def obter_carros():
-    return jsonify(carros)
+    return jsonify(clientes)
 
 
 @app.route('/cliente/<int:id>',methods =['GET'])
 def obter_carros_por_id(id):
-    for carro in carros:
+    for carro in clientes:
         if carro.get('id') == id:
             return jsonify(carro)
 
